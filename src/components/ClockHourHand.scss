@@ -1,0 +1,21 @@
+.hour-hand{
+    z-index: 4;
+    position: absolute;
+    transform-origin: top;
+
+    background: none;
+    height: 150px;
+    top: 150px;
+    left: 150px;
+    opacity: 1;
+    &:before {
+        
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 80px;
+            background: black;
+            left: 0;
+            top: -75px;
+    }
+}

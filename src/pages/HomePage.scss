@@ -1,0 +1,45 @@
+.indicators {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    .indicator{
+        position: absolute;
+        left: 18px;
+        width: 2px;
+        transform-origin: bottom center;
+        z-index: 2;
+        background: none;
+        height: 123px;
+        top: -52px;
+        opacity: 1;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 7px;
+        background: #000;
+        left: 0;
+        top: 0;
+      }
+      @for $i from 1 through 60 {
+        &:nth-of-type(#{$i}) {
+          transform: rotateZ(calc(6deg * #{$i}));
+        }
+        
+        @if $i % 5 == 0 {
+          &:nth-of-type(#{$i}) {
+            width: 2px;
+            &:after {
+              height: 15px;
+              width: 6px;
+              left: -2px;
+            }
+          }
+        }
+      }
+    }
+}

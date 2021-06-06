@@ -1,0 +1,31 @@
+.second-hand{
+    z-index: 5;
+    position: absolute;
+    transform-origin: top;
+
+    background: none;
+    height: 150px;
+    top: 150px;
+    left: 150px;
+    opacity: 1;
+    &:before {
+        
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 130px;
+            background: red;
+            left: 0;
+            top: -100px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: -3px;
+        top: -90px;
+        background: red;
+        border-radius: 50%;
+    }
+}
